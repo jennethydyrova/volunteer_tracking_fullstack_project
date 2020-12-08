@@ -16,7 +16,7 @@ export class VolunteersTracking {
 
   @PrimaryColumn("int") projectsId: number;
 
-  @PrimaryColumn("int") volunteerId: number;
+  @PrimaryColumn("int") volunteerId: number[];
 
   @Column({ type: "boolean" })
   showedUp: boolean;
@@ -26,7 +26,7 @@ export class VolunteersTracking {
 
   @ManyToOne(() => Volunteer)
   @JoinColumn()
-  volunteer: Volunteer;
+  volunteer: Volunteer[];
 
   @ManyToOne(() => Projects)
   @JoinColumn()

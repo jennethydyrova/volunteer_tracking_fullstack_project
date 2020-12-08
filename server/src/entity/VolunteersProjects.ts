@@ -14,5 +14,5 @@ export class VolunteersProjects {
   @JoinTable({
     name: "volunteesTracking",
   })
-  volunteers: Volunteer[];
+  volunteers: [Volunteer];
 }

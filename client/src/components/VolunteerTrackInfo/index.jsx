@@ -44,7 +44,7 @@ const VolunteerTrackingInfo = ({ volunteer }) => {
         <td>{volunteer.id}</td>
         <td>{volunteer.projectsId}</td>
         <td>{volunteer.volunteerId}</td>
-        <td>{volunteer.showedUp}</td>
+        <td>{volunteer.showedUp === true ? "Showed up" : "Did not show up"}</td>
         <td>{volunteer.eventDate}</td>
         <td>
           <Button onClick={() => setShow(true)}>Edit</Button>

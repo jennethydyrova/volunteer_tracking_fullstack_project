@@ -14,11 +14,12 @@ export class VolunteersTrackingController {
   }
 
   async save(request: Request, response: Response, next: NextFunction) {
-    console.log(request.body);
-    const projectId = request.body.projectId;
+    console.log(request.body.projectId);
     const volunteersArray = request.body.volunteer;
-    const volunteerId = request.body.volunteer.id;
+    const projectId = request.body.projectId;
+
     volunteersArray.forEach((volunteer) => {
+      const volunteerId = volunteer.id;
       return this.volunteersTrackingRepository.save({ projectId, volunteerId });
     });
   }
